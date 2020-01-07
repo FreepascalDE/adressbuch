@@ -1,0 +1,330 @@
+object FrmAdressbook: TFrmAdressbook
+  Left = -1669
+  Height = 594
+  Top = 167
+  Width = 521
+  Caption = 'FrmAdressbook'
+  ClientHeight = 594
+  ClientWidth = 521
+  OnShow = FormShow
+  LCLVersion = '2.0.0.4'
+  object PageControl1: TPageControl
+    Left = 16
+    Height = 440
+    Top = 8
+    Width = 440
+    ActivePage = TabSheet1
+    TabIndex = 0
+    TabOrder = 0
+    object TabSheet1: TTabSheet
+      Caption = 'Adressbuch Übersicht'
+      ClientHeight = 412
+      ClientWidth = 432
+      object LVAdressbook: TListView
+        Left = 8
+        Height = 232
+        Top = 8
+        Width = 372
+        Columns = <        
+          item
+            Caption = 'ID'
+            Width = 30
+          end        
+          item
+            Caption = 'Firstname'
+            Width = 75
+          end        
+          item
+            Caption = 'Lastname'
+            Width = 75
+          end        
+          item
+            Caption = 'Tel.:'
+            Width = 93
+          end        
+          item
+            Caption = 'Mobile'
+            Width = 93
+          end>
+        GridLines = True
+        RowSelect = True
+        TabOrder = 0
+        ViewStyle = vsReport
+        OnClick = LVAdressbookClick
+      end
+      object Label10: TLabel
+        Left = 8
+        Height = 1
+        Top = 248
+        Width = 1
+        ParentColor = False
+      end
+      object EdtSearch: TEdit
+        Left = 8
+        Height = 23
+        Top = 248
+        Width = 168
+        TabOrder = 1
+      end
+      object BtnSearch: TButton
+        Left = 296
+        Height = 25
+        Top = 246
+        Width = 83
+        Caption = 'Suche'
+        OnClick = BtnSearchClick
+        TabOrder = 2
+      end
+      object BtnDeleteFilter: TButton
+        Left = 296
+        Height = 25
+        Top = 280
+        Width = 83
+        Caption = 'Filter löschen'
+        OnClick = BtnDeleteFilterClick
+        TabOrder = 3
+      end
+      object CBSearchField: TComboBox
+        Left = 184
+        Height = 23
+        Top = 248
+        Width = 100
+        AutoSelect = False
+        ItemHeight = 15
+        ItemIndex = 0
+        Items.Strings = (
+          'Firstname'
+          'Lastname'
+        )
+        TabOrder = 4
+        Text = 'Firstname'
+      end
+      object EdtIndex: TEdit
+        Left = 184
+        Height = 23
+        Top = 280
+        Width = 96
+        TabOrder = 5
+      end
+    end
+    object TabSheet2: TTabSheet
+      Caption = 'Adressnuch Eintrag'
+      ClientHeight = 412
+      ClientWidth = 432
+      object Label1: TLabel
+        Left = 65
+        Height = 15
+        Top = 30
+        Width = 14
+        Caption = 'ID:'
+        ParentColor = False
+      end
+      object EdtAdressID: TEdit
+        Left = 88
+        Height = 23
+        Top = 22
+        Width = 288
+        TabOrder = 0
+      end
+      object EdtAdressFirstname: TEdit
+        Left = 88
+        Height = 23
+        Top = 52
+        Width = 288
+        TabOrder = 1
+      end
+      object Label2: TLabel
+        Left = 24
+        Height = 15
+        Top = 60
+        Width = 55
+        Caption = 'Firstname:'
+        ParentColor = False
+      end
+      object Label3: TLabel
+        Left = 25
+        Height = 15
+        Top = 92
+        Width = 54
+        Caption = 'Lastname:'
+        ParentColor = False
+      end
+      object EdtAdressLastname: TEdit
+        Left = 88
+        Height = 23
+        Top = 84
+        Width = 288
+        TabOrder = 2
+      end
+      object Label4: TLabel
+        Left = 8
+        Height = 15
+        Top = 124
+        Width = 71
+        Caption = 'Displayname:'
+        ParentColor = False
+      end
+      object EdtAdressDisplayname: TEdit
+        Left = 88
+        Height = 23
+        Top = 116
+        Width = 288
+        TabOrder = 3
+      end
+      object EdtAdressLoginname: TEdit
+        Left = 88
+        Height = 23
+        Top = 148
+        Width = 288
+        TabOrder = 4
+      end
+      object EdtAdressPassword: TEdit
+        Left = 88
+        Height = 23
+        Top = 180
+        Width = 288
+        TabOrder = 5
+      end
+      object EdtAdressTel: TEdit
+        Left = 88
+        Height = 23
+        Top = 212
+        Width = 288
+        TabOrder = 6
+      end
+      object EdtAdressMobile: TEdit
+        Left = 88
+        Height = 23
+        Top = 244
+        Width = 288
+        TabOrder = 7
+      end
+      object EdtAdressEMail: TEdit
+        Left = 88
+        Height = 23
+        Top = 276
+        Width = 288
+        TabOrder = 8
+      end
+      object Label5: TLabel
+        Left = 16
+        Height = 15
+        Top = 156
+        Width = 63
+        Caption = 'Loginname:'
+        ParentColor = False
+      end
+      object Label6: TLabel
+        Left = 26
+        Height = 15
+        Top = 188
+        Width = 53
+        Caption = 'Password:'
+        ParentColor = False
+      end
+      object Label7: TLabel
+        Left = 57
+        Height = 15
+        Top = 220
+        Width = 22
+        Caption = 'Tel.:'
+        ParentColor = False
+      end
+      object Label8: TLabel
+        Left = 39
+        Height = 15
+        Top = 252
+        Width = 40
+        Caption = 'Mobile:'
+        ParentColor = False
+      end
+      object Label9: TLabel
+        Left = 42
+        Height = 15
+        Top = 284
+        Width = 37
+        Caption = 'E-Mail:'
+        ParentColor = False
+      end
+      object BtnSelectData: TButton
+        Left = 280
+        Height = 25
+        Top = 308
+        Width = 96
+        Caption = 'Select Data'
+        OnClick = BtnSelectDataClick
+        TabOrder = 9
+      end
+      object BtnUpdateData: TButton
+        Left = 280
+        Height = 25
+        Top = 336
+        Width = 96
+        Caption = 'Update Data'
+        OnClick = BtnUpdateDataClick
+        TabOrder = 10
+      end
+      object BtnNewData: TButton
+        Left = 196
+        Height = 25
+        Top = 308
+        Width = 75
+        Caption = 'New Data'
+        OnClick = BtnNewDataClick
+        TabOrder = 11
+      end
+      object BtnInsertData: TButton
+        Left = 280
+        Height = 25
+        Top = 368
+        Width = 96
+        Caption = 'Insert Data'
+        OnClick = BtnInsertDataClick
+        TabOrder = 12
+      end
+      object EdtDescId: TEdit
+        Left = 88
+        Height = 23
+        Top = 312
+        Width = 80
+        TabOrder = 13
+      end
+      object Label11: TLabel
+        Left = 34
+        Height = 15
+        Top = 320
+        Width = 45
+        Caption = 'DESC ID:'
+        ParentColor = False
+      end
+      object BtnDelete: TButton
+        Left = 196
+        Height = 25
+        Top = 344
+        Width = 75
+        Caption = 'Delete Data'
+        OnClick = BtnDeleteClick
+        TabOrder = 14
+      end
+    end
+  end
+  object IBConnection1: TIBConnection
+    Connected = False
+    LoginPrompt = False
+    KeepConnection = False
+    CheckTransactionParams = False
+    left = 352
+    top = 472
+  end
+  object SQLQuery1: TSQLQuery
+    FieldDefs = <>
+    Params = <>
+    left = 144
+    top = 472
+  end
+  object SQLTransaction1: TSQLTransaction
+    Active = False
+    left = 256
+    top = 472
+  end
+end
