@@ -388,7 +388,7 @@ begin
    IBConnection1.Hostname          := 'localhost';
    IBConnection1.UserName          := 'SYSDBA';
    IBConnection1.Password          := 'masterkey';
-   IBConnection1.DatabaseName      := 'C:\software-entwicklung\Adressbuch\00-DB\AWUSER.FDB';
+   IBConnection1.DatabaseName      := ExtractFilePath(Application.ExeName) + 'AWUSER.FDB';
    IBConnection1.Transaction       := SQLTransaction1;
    IBConnection1.Connected         := true;
    SQLQuery1.Database              := IBConnection1;
